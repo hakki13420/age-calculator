@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins;
+}
+
+:root{
+    
+    --Purple: hsl(259, 100%, 65%);
+    --LightRed: hsl(0, 100%, 67%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --OffWhite: hsl(0, 0%, 94%);
+    --LightGrey: hsl(0, 0%, 86%);
+    --SmokeyGrey: hsl(0, 1%, 44%);
+    --OffBlack: hsl(0, 0%, 8%);
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--OffWhite);
+    height: 100vh;
+}
+
+.container{
+    background-color: var(--White);
+    padding: 40px;
+    border-radius: 20px 20px 120px;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.container form > .form-body{
+    display: flex;
+    gap: 8px
+}
+.container form > .form-body > div{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100px;
+}
+
+.container form > .form-body > div label{
+    text-transform: uppercase;
+    color: var(--SmokeyGrey);   
+    font-size: 11px;
+}
+
+.container form > .form-body > div input{
+    padding: 5px;
+    border: 1px solid var(--LightGrey);
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container form > .form-body > div input:focus{    
+    border: 1px solid var(--Purple);
+    outline: none;
+}
+
+
+
+.error{
+    color: var(--LightRed);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.separator{
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+}
+.separator>div{
+    width: 80%;
+    color: var(--LightGrey);
+}
+.separator button{
+    border: none;
+    background-color: transparent;
+}
+.separator img{
+    background-color: var(--Purple);
+    border-radius:50%;
+    cursor: pointer;
+
+}
+.separator img:hover{    
+    background-color: black;        
+}
+
+.result{
+    font-size: 45px;
+    font-weight: 800;
+    font-style: italic;
+}
+.result > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.result span{
+    color: var(--Purple);
+    letter-spacing: 5px;
+}
+
+
+@media (max-width:375px){
+    .container{
+        padding: 20px;
+    }
+    .container form > .form-body > div{
+        gap: 20px;
+        width: 23vw;
+    }
+    .container form > .form-body > div label{  
+        font-size: 4vw;
+    }
+    .container form > .form-body > div input{
+        font-size: 6vw;    
+    }
+    
+    
+    .result{
+        font-size: 10vw;
+        
+    }
+    
+}
