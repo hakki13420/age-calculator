@@ -134,6 +134,27 @@ main{
     .container form > .form-body > div input{
         font-size: 6vw;    
     }
+
+    .separator{
+        display: block;
+        position: relative;
+    }
+    .separator>div{
+        width: 100%;
+    }
+    .separator button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+    }
+    .separator img{
+        background-color: var(--Purple);
+        border-radius:50%;
+        cursor: pointer;
+    
+    }
+    
     
     
     .result{
